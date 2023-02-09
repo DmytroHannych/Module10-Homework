@@ -7,6 +7,10 @@ public class UserDto {
     private String name;
     private String age;
 
+    public UserDto(String name, String age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public String getName() {
         return name;
