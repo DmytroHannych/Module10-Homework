@@ -36,8 +36,6 @@ public class Task3 {
                     return comp;
             }
         };
-        Map<String, Integer> result = new TreeMap<>(comparator.reversed());
-        result.putAll(myMap);
-        System.out.println(result);
+        myMap.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEach(System.out::println);
     }
 }
